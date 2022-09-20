@@ -8,6 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 pytest = "^7.1.3"
+dapla-toolbelt = "^1.3.2"
 
 [tool.poetry.dev-dependencies]
 
