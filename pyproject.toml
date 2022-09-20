@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "replace_me"
+version = "0.0.0"
+description = ""
+authors = ["replace_me <replace_me@ssb.no>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "replace_me"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+GitPython = "^3.1.27"
+PyGithub = "^1.55"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
