@@ -8,10 +8,12 @@ def buzz(x:int) -> str:
         return "buzz"
     return ""
     
-def fizzbuzz(x:list) -> None:
+def fizzbuzz(x:list) -> list:
+    result = []
     for y in x:
         r = ""
         r = fizz(y) + buzz(y)
         if not r:
             r = y
-        print(r)
+        result.append(r)
+    return result
