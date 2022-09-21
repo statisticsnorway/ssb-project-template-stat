@@ -14,13 +14,20 @@ Etter at du har importert denne templaten inn i ditt prosjekt, står du fritt ti
 ### Plassering av notebooks og prosjektfunksjoner
 
 ### Notat om importer og "__init__.py"-filene som ligger i noen mapper
-#### "Boilderplate"-kode for å finne prosjektmappen med hjelp av .ssb_project_root
+#### "Boilerplate"-kode for å finne prosjektmappen med hjelp av pyproject.toml
+En forutsetning for mye av "hurtigstart"-koden er at denne filen ligger kun en gang i prosjektet, og at det er der "grunnmappen" til prosjektet er.
 
 
 
 ### Instruksjoner for å innstallere nye pakker med Poetry
+I terminalen:
+´poetry add pakke-navn´
+
+Kurs/video i å legge til pakker med Poetry? Hvordan jobbe med kræsjende dependencies?
+
 
 ### Kodetesting med Pytest
+Det foretrukne 
 
 ### Innhold i .gitignore og .gitattributes
 
