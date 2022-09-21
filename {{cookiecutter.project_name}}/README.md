@@ -20,8 +20,8 @@ Denne lages av pakke-manageren "poetry", men er en av konfigurasjonsfilene pytho
 
 
 ### Instruksjoner for å innstallere nye pakker med Poetry
-I terminalen:
-´poetry add pakke-navn´
+I terminalen:\
+`poetry add pakke-navn`
 
 Kurs/video i å legge til pakker med Poetry? Hvordan jobbe med kræsjende dependencies?
 
@@ -36,7 +36,10 @@ Pytest vil da lete etter test-mappen, finne .py-filer som starter med "test_". I
 Prøv det gjerne med koden du får inn som en del av templaten. Det er tre tester (tre prikker), en for hver av de tre funksjonene fizz, buzz og fizzbuzz.
 
 ### Innhold i .gitignore og .gitattributes
+.gitignore bestemmer hvilke filer som skjules fra git-staging, altså filer git ignorerer, mtp. om de skal "bli med". Om dere bruker noen dataformater dere er nervøse for at kan ende sammen med koden, så kan det være nyttig å detaljere disse her.
 
+.gitattributes forteller systemet bla. at den skal fjærne output fra under cellene i notebooks før de sendes opp til github. Dette er viktig da det ofte ligger data representert her. Pass gjerne på at disse filene er med ved å kjøre denne kommandoen i terminalen i bunnmappen av prosjektet deres:\
+`ls -a`
 
 ### "MIT" som lisenstype
 
