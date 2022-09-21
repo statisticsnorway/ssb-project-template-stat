@@ -1,4 +1,11 @@
-# stat-hurtigstart-template-master
+# {{cookiecutter.project_name}}
+{{cookiecutter.description}}
+
+Opprettet av:
+{{cookiecutter.full_name}} <{{cookiecutter.email}}>
+
+---
+# Om templaten
 Valgene som er gjort i denne templaten dokumenteres nedover i denne readme-filen.
 Etter at du har importert denne templaten inn i ditt prosjekt, står du fritt til å slette hele, eller deler av innholdet i denne filen, og erstatte med eget innhold.
 
