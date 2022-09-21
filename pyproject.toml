@@ -1,9 +1,12 @@
 [tool.poetry]
-name = "replace_me"
-version = "0.0.0"
-description = "Template for starting dapla python projects"
-authors = ["replace_me <replace_me@ssb.no>"]
+name = "{{cookiecutter.project_name}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 license = "MIT"
+
+[tool.poetry.scripts]
+datadoc = 'datadoc.app:main'
 
 [tool.poetry.dependencies]
 python = "^3.10"
