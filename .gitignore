@@ -10,6 +10,12 @@
 *.parquet
 *.sas7bdat
 
+# Suggestions for other dataformats that should not follow code?
+*.csv
+*.db
+*.xlsx
+*.xls
+*.feather
 
 # The section below is from the GitHub .gitignore template for Python:
 # https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore

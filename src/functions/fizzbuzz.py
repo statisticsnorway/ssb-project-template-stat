@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def fizz(x:int) -> str:
     if x%3 == 0:
         return "fizz"
