@@ -49,7 +49,8 @@ Prøv det gjerne med koden du får inn som en del av templaten. Det er tre teste
 `ls -a`
 
 ### "MIT" som lisenstype
-
+SSB har standardisert på [MIT-lisensen](https://github.com/statisticsnorway/adr/blob/main/docs/0006-aapen-kildekode-i-ssb.md)
+som sin kildekodelisens.
 
 ---
 
