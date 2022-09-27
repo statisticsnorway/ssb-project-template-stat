@@ -7,17 +7,16 @@
 # The section below contains SSB specific ignores, not included in the Python-
 # and R-ignores from GitHub.
 
-*.parquet
-*.sas7bdat
-
-# Suggestions for other dataformats that should not follow code?
 *.csv
 *.db
-*.xlsx
-*.xls
 *.feather
+*.parquet
+*.sas7bdat
+*.xls
+*.xlsx
+*.zip
 
-# The section below is from the GitHub .gitignore template for Python:
+qe GitHub .gitignore template for Python:
 # https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 
 # Byte-compiled / optimized / DLL files
@@ -227,7 +226,8 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
+# SSB: The directory below is commented out because default when generating documentation with Sphinx
+#docs/
 
 # translation temp files
 po/*~
