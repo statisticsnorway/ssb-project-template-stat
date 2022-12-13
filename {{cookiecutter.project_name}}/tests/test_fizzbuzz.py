@@ -1,6 +1,6 @@
 import os
 notebook_path = os.getcwd()
-while ".ssb_project_root" not in os.listdir():
+while "pyproject.toml" not in os.listdir():
     os.chdir("../")
 from src.functions.fizzbuzz import fizz, buzz, fizzbuzz
 
