@@ -1,4 +1,6 @@
 import os
+
+
 notebook_path = os.getcwd()
 for folder_level in range(50):
     if "pyproject.toml" in os.listdir(): break
