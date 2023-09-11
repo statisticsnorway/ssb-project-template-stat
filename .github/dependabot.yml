@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/{{cookiecutter.project_name}}"
+    schedule:
+      interval: weekly
+    labels:
+      - "cookiecutter"
+      - "dependencies"
+      - "python"
+    versioning-strategy: lockfile-only
+    allow:
+      - dependency-type: "all"
+    groups:
+      poetry-dependencies:
+        patterns:
+          - "*"
