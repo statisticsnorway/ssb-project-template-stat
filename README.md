@@ -1,22 +1,15 @@
-# stat-hurtigstart-template-master
-Som en del av hack 2022 opprettes dette repoet som ett forsøk på å definere "standard mappestruktur og verktøysvalg for statistikkproduksjonsløp skrevet i Python".
+# ssb-project-template-stat
 
-Gruppedeltagere:
-- Miles Winther
-- Arne Sørli
-- Carl F. Corneil
-- Øyvind Bruer-Skarsbø
+Et template repo, egnet som utgangspunkt for statistikkproduksjon.
 
-Valgene som er gjort i templaten kommenteres videre inne i cookie-cutter-template mappen.
+Repoet er typisk brukt sammen med kommandolinjeverktøyet [`ssb-project`](https://github.com/statisticsnorway/ssb-project-cli). Når man bruker `ssb-project` for å opprette et nytt prosjekt (f.eks `ssb-project create mitt-prosjekt`) så er dette repoet standardvalget som mal.
 
-Templaten er tenkt brukt som en del av en større "dapla hurtigstart create"-funksjon.\
-Det vil være naturlig å produsere flere templates til ulike behov etter hvert som de oppstår og kartlegges.
+## Oppdateringer
 
-Om du ønsker å få inn denne templaten direkte via cruft:\
-`cruft create https://github.com/statisticsnorway/stat-hurtigstart-template-master`
+Det er spesifisert avhengigheter i dette repoet, som må oppdateres jevnlig for å få med sikkerhetsoppdateringer. For å oppdatere kan man:
 
-
-Send inn alle parameterene, uten å skrive de inn, kan gjøres via --no-input og --extra-context.\
-`cruft create https://github.com/statisticsnorway/stat-hurtigstart-template-master --no-input --extra-context "{\"full_name\":\"Passed In\"}"`\
-Jsonen som passes til --extra-context må ha doble fnutter, som må være escapet inne i jsonen.\
-Om du først gjør dette, vær sikker på at du har dekket alle parametrene satt av cookiecutter.json.
+1. Instansiere malen med f.eks `ssb-project create temp`
+1. `cd temp`
+1. `poetry update`
+1. Kopiere så den resulterende `poetry.lock` fil til dette repoet
+1. Åpne en PR med de eventuelle endringene
