@@ -22,6 +22,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.poetry/cache/
 
 # C extensions
 *.so
