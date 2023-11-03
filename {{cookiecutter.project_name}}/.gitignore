@@ -201,3 +201,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# ignore poetry in .config
+/.config/poetry
