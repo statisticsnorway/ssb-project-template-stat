@@ -203,4 +203,4 @@ po/*~
 rsconnect/
 
 # ignore poetry in .config
-/.config/poetry
+.poetry/**
