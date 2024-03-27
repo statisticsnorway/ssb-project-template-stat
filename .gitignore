@@ -234,3 +234,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Blaise specific ignores
+*.bdix
+*.bdbx
