@@ -20,7 +20,9 @@
 # %%
 # Central imports (pandas as pd etc.)
 import os
+
 import pandas as pd
+
 
 # %% [markdown]
 # ### Demo av importer fra produksjonsnivå
@@ -36,6 +38,7 @@ for folder_level in range(50):
 # %%
 # Do local imports here
 from src.functions.fizzbuzz import fizzbuzz
+
 
 # %%
 # Reset current working directory after local imports
