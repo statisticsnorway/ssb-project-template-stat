@@ -5,7 +5,11 @@ description = "{{cookiecutter.description}}"
 authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 license = "MIT"
 readme = "README.md"
-package-mode = false
+# To include functions in Jupyter Notebooks from other parts of the directory tree,
+# without using ProjectRoot from ssb-fagfunksjoner.
+packages = [
+    { include = "functions", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
