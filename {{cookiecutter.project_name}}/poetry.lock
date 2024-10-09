@@ -645,13 +645,13 @@ test-randomorder = ["pytest-randomly"]
 
 [[package]]
 name = "dapla-toolbelt"
-version = "2.0.19"
+version = "3.0.2"
 description = "Dapla Toolbelt"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "dapla_toolbelt-2.0.19-py3-none-any.whl", hash = "sha256:fb051f5460ba9b800f4d26e9fe43be240afeabb59f9d7ac63f55bf54a3abc35b"},
-    {file = "dapla_toolbelt-2.0.19.tar.gz", hash = "sha256:9bcec659c5eb17210d2ced501ddf42c28a1795c960f435aaa3cabcf4c61cdad6"},
+    {file = "dapla_toolbelt-3.0.2-py3-none-any.whl", hash = "sha256:ef2a290ee3bdc229ad4ce3509053c343763cd1896aeb543ede7cf4607dae3e76"},
+    {file = "dapla_toolbelt-3.0.2.tar.gz", hash = "sha256:42b4cb6b915450f144580bee5fde6374e8db3555682114c4e5208359d9281f60"},
 ]
 
 [package.dependencies]
