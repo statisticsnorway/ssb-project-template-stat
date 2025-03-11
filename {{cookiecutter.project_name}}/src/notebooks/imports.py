@@ -28,21 +28,8 @@ import pandas as pd
 # ### Demo av importer fra produksjonsnivå
 
 # %%
-# Change directory until find project root
-notebook_path = os.getcwd()
-for folder_level in range(50):
-    if "pyproject.toml" in os.listdir():
-        break
-    os.chdir("../")
-
-# %%
 # Do local imports here
-from src.functions.fizzbuzz import fizzbuzz
-
-
-# %%
-# Reset current working directory after local imports
-os.chdir(notebook_path)
+from functions.fizzbuzz import fizzbuzz
 
 # %%
 # Example local function import
