@@ -1,0 +1,34 @@
+# This file store common configurations for the project.
+#
+# It is read by Dynaconf in the file `config.py`, and the format supports string
+# substitutions. Dynaconf allows string substitions by using the @format token prefix
+# and including placeholders. Example:
+#
+# DB_NAME = "mydb.db"
+# DB_PATH = "@format /buckets/buckets/produkt/{this.DB_NAME}"
+#
+# See https://www.dynaconf.com/dynamic/ for further details on string substitutions.
+#
+# The sections specify different environments, and the value of the variables in the
+# specified environment. The values in the default section is always set first,
+# and if another environment is specified then the values are overriden.
+#
+# The `default` environment is using gs-buckets mounted as files on DaplaLab.
+# The `gsbuckets` environment is using gs-buckets with gs-prefix.
+#
+# You can select which environment to use in the file config/config.py.
+
+[default]
+dapla_team = "tip-tutorials"
+short_name = "metstat"  # statistikkens kortnavn
+kildedata_root_dir = "@format /buckets/kilde/{this.short_name}"
+product_root_dir = "@format /buckets/produkt/{this.short_name}"
+inndata_dir = "@format {this.product_root_dir}/inndata"
+klargjort_dir = "@format {this.product_root_dir}/klargjorte-data"
+statistikk_dir = "@format {this.product_root_dir}/statistikk"
+utdata_dir = "@format {this.product_root_dir}/utdata"
+temporary_run = true
+
+[gsbuckets]
+kildedata_root_dir = "@format gs://ssb-{this.dapla_team}-data-kilde-prod/{this.short_name}"
+product_root_dir = "@format gs://ssb-{this.dapla_team}-data-produkt-prod/{this.short_name}"
