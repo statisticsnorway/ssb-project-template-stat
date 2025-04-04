@@ -109,5 +109,4 @@ settings = Dynaconf(
 ```
 
 [Dynaconf]: https://www.dynaconf.com/
-[tech-coach-stat repoet]: https://github.com/statisticsnorway/tech-coach-stat/tree/main/config
 [TOML-filer]: https://toml.io/en/
