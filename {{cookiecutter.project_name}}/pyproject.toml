@@ -8,12 +8,14 @@ readme = "README.md"
 # To include functions in Jupyter Notebooks from other parts of the directory tree,
 # without using ProjectRoot from ssb-fagfunksjoner.
 packages = [
+    { include = "config" },
     { include = "functions", from = "src" },
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 dapla-toolbelt = ">=1.3.2"
+dynaconf = ">=3.2.6"
 ipykernel = ">=6.15.3"
 
 [tool.poetry.group.dev.dependencies]
