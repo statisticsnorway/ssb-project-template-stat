@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from typing import Iterable
 
 
 def fizz(x: int) -> str:
@@ -13,12 +14,12 @@ def buzz(x: int) -> str:
     return ""
 
 
-def fizzbuzz(x: list) -> list:
+def fizzbuzz(x: Iterable[int]) -> list[str]:
     result = []
     for y in x:
         r = ""
         r = fizz(y) + buzz(y)
         if not r:
-            r = y
+            r = str(y)
         result.append(r)
     return result

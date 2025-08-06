@@ -17,4 +17,4 @@ def test_fizzbuzz():
     assert fizzbuzz([15]) == ["fizzbuzz"]
     assert fizzbuzz([3]) == ["fizz"]
     assert fizzbuzz([5]) == ["buzz"]
-    assert fizzbuzz([2]) == [2]
+    assert fizzbuzz([2]) == ["2"]
