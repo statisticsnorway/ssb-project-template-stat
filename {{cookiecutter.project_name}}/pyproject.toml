@@ -7,7 +7,6 @@ license = "MIT"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "dapla-toolbelt >=4.0.0",
     "dynaconf >=3.2",
     "ipykernel >=6.29",
 ]
