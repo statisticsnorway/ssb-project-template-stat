@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ssb-project-template
+  title: SSB Project Template
+  description: |
+    Template for creating python projects.
+  tags:
+    - python
+    - project
+    - template
+  annotations:
+    github.com/project-slug: statisticsnorway/ssb-project-template-stat
+spec:
+  type: library
+  owner: dapla-stat-developers
+  lifecycle: production
