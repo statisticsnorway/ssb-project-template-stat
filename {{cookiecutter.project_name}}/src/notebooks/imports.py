@@ -19,8 +19,6 @@
 
 # %%
 # Central imports (pandas as pd etc.)
-import os
-
 import pandas as pd
 
 
@@ -29,10 +27,8 @@ import pandas as pd
 
 # %%
 # Do local imports here
-from functions.fizzbuzz import fizzbuzz
-
+from {{packages_prefix}}_functions.delete_me import hello_world
 
 # %%
 # Example local function import
-for x in fizzbuzz(range(1, 26)):
-    print(x)
+print(hello_world())
