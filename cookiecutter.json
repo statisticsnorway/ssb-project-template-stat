@@ -2,6 +2,7 @@
   "full_name": "Ola Nordmann",
   "email": "oln@ssb.no",
   "project_name": "stat-statistikknavn",
+  "packages_prefix": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-','_') }}",
   "description": "Vår statistikk er om X, og gjennomføres 1 gang i året",
   "license_year": "2022"
 }
