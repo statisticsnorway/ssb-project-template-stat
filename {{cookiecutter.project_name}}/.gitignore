@@ -267,3 +267,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Dynaconf secret and local files
+.secrets.*
+.local.*
