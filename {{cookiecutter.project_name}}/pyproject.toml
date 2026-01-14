@@ -26,8 +26,8 @@ requires-poetry = ">=2.2"
 # To include functions in Jupyter Notebooks from other parts of the directory tree,
 # without using ProjectRoot from ssb-fagfunksjoner.
 packages = [
-    { include = "config" },
-    { include = "functions", from = "src" },
+    { include = "{{packages_prefix}}_config" },
+    { include = "{{packages_prefix}}_functions", from = "src" },
 ]
 
 [tool.poetry.dependencies]
