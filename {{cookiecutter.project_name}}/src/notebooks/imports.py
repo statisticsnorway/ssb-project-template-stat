@@ -23,7 +23,6 @@ import os
 
 import pandas as pd
 
-
 # %% [markdown]
 # ### Demo av importer fra produksjonsnivå
 
