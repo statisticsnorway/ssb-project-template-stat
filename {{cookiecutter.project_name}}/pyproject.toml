@@ -54,3 +54,6 @@ cell_metadata_filter = "-papermill,tags"
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.uv]
+exclude-newer = "7 days"
