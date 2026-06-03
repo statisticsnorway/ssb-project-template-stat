@@ -4,3 +4,7 @@ cache-dir = ".poetry/cache"
 # Keep virtual environment in project directory. Useful in Jupyter to avoid recreating environment.
 [virtualenvs]
 in-project = true
+
+# Use 7 days cooldown period when installing packeges from PyPI
+[solver]
+min-release-age = 7
