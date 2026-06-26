@@ -68,3 +68,9 @@ repos:
         language: system
         types_or: [python, jupyter]
         require_serial: true
+      - id: tombi-format
+        name: Format TOML files
+        entry: tombi format
+        language: system
+        types_or: [toml]
+        require_serial: true
