@@ -28,6 +28,12 @@ klargjort_dir = "@format {this.product_root_dir}/klargjorte-data"
 statistikk_dir = "@format {this.product_root_dir}/statistikk"
 utdata_dir = "@format {this.product_root_dir}/utdata"
 temporary_run = true
+{% if cookiecutter.altinn %}
+# Altinn related settings
+form_number = "RA-XXXX"
+form_folder = "@format {this.inndata_dir}/{this.form_number}"
+{% else %}
+{% endif %}
 
 [gsbuckets]
 kildedata_root_dir = "@format gs://ssb-{this.dapla_team}-data-kilde-prod/{this.short_name}"

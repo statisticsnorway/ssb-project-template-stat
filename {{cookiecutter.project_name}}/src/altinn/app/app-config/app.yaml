@@ -1,0 +1,19 @@
+app_settings:
+  port: 8000
+  # service_prefix: None
+  # stylesheet: None
+  enable_logging: false
+  logging_level: warning
+  log_to_file: false
+  variableselector: 
+    refnr: refnr
+    ident: ident
+    time_units:
+      aar: 1
+    grouping_variables:
+      - altinnskjema
+      - variabel
+  connection:
+    type: postgres
+    database_url: test
+modules:
