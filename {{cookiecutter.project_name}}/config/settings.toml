@@ -30,8 +30,8 @@ utdata_dir = "@format {this.product_root_dir}/utdata"
 temporary_run = true
 {% if cookiecutter.altinn %}
 # Altinn related settings
-form_number = "RA-XXXX"
-form_folder = "@format {this.inndata_dir}/{this.form_number}"
+form_numbers = ["RAXXXX"]
+form_folder = "@format {this.inndata_dir}/temp/altinn"
 {% else %}
 {% endif %}
 

@@ -25,15 +25,16 @@ def get_storage_connector():
 
 
 def main_process_forms():
-    processor = DefaultFormProcessor(
-        form_name=settings.form_number,
-        form_base_path=settings.form_folder,
-        extractor=get_extractor(),
-        connector=get_storage_connector(),
-        alias_mapping={},
-        checkbox_mapping=[],
-    )
-    processor.process_new_forms()
+    for form in settings.form_numbers:
+        processor = DefaultFormProcessor(
+            form_name=form,
+            form_base_path=f"{settings.form_folder}/{form}",
+            extractor=get_extractor(),
+            connector=get_storage_connector(),
+            alias_mapping={},
+            checkbox_mapping=[],
+        )
+        processor.process_new_forms()
 
 
 if __name__ == "__main__":
