@@ -4,9 +4,10 @@ from sqlalchemy import create_engine
 
 from ssb_altinn_form_tools.default_form_extractor import DefaultFormExtractor
 from ssb_altinn_form_tools.default_form_processor import DefaultFormProcessor
-from ssb_altinn_form_tools.sqlalchemy_storage_connector import (
-    SqlAlchemyStorageConnector,
+from ssb_altinn_form_tools.parquedit_storage_connector import (
+    ParqueditStorageConnector,
 )
+from parquedit import ParquEdit
 
 from config.config import settings
 
@@ -19,8 +20,8 @@ def get_extractor():
 
 
 def get_storage_connector():
-    engine = engine = create_engine("sqlite:///./db.db", echo=False)
-    return SqlAlchemyStorageConnector(engine)
+    conn = ParquEdit()
+    return ParqueditStorageConnector(engine = conn)
 
 
 def main_process_forms():
