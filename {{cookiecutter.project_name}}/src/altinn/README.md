@@ -1,13 +1,17 @@
 # Behandling av altinn skjemaer
 
-## 1. Prosessering (form_processing.py)
+## 1. Kildomat
+
+TODO:
+
+## 2. Prosessering (form_processing.py)
 
 Dette steget tar seg av:
 - utflating av mottatte skjemaer
 - nødvendige omkodinger
 - innlasting til database/lagringssystem
 
-## 2. Behandling (app.py)
+## 3. Behandling (app.py)
 
 Her behandles skjemaene med kode og grensesnitt for å bli omgjort til klargjorte data
 
@@ -25,7 +29,7 @@ Det anbefales å lage en egen mappe i app mappen hvor du legger egne moduler og 
 
 Se veiledning for å lage moduler i https://github.com/statisticsnorway/ssb-dash-framework/tree/main
 
-## 3. Eksport (form_export.py)
+## 4. Eksport (form_export.py)
 
 I dette steget eksporteres et klargjort datasett med alle endringene du har gjort.
 

@@ -2,7 +2,6 @@ import logging
 
 from sqlalchemy import create_engine
 
-from ssb_altinn_form_tools.batch_form_processor import BatchFormProcessor
 from ssb_altinn_form_tools.default_form_extractor import DefaultFormExtractor
 from ssb_altinn_form_tools.default_form_processor import DefaultFormProcessor
 from ssb_altinn_form_tools.sqlalchemy_storage_connector import (
@@ -25,7 +24,7 @@ def get_storage_connector():
 
 
 def main_process_forms():
-    processor = BatchFormProcessor(
+    processor = DefaultFormProcessor(
         form_name=settings.form_number,
         form_base_path=settings.form_folder,
         extractor=get_extractor(),
