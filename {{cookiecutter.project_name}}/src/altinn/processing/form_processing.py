@@ -7,7 +7,7 @@ from ssb_altinn_form_tools.default_form_processor import DefaultFormProcessor
 from ssb_altinn_form_tools.parquedit_storage_connector import (
     ParqueditStorageConnector,
 )
-from parquedit import ParquEdit
+from ssb_parquedit import ParquEdit
 
 from config.config import settings
 
@@ -21,7 +21,7 @@ def get_extractor():
 
 def get_storage_connector():
     conn = ParquEdit()
-    return ParqueditStorageConnector(engine = conn)
+    return ParqueditStorageConnector(engine=conn)
 
 
 def main_process_forms():
