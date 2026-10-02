@@ -20,7 +20,7 @@ def get_extractor():
 
 
 def get_storage_connector():
-    conn = ParquEdit()
+    conn = ParquEdit() # For å kjøre testing, endre til ParquEdit().local() her
     return ParqueditStorageConnector(engine=conn)
 
 
