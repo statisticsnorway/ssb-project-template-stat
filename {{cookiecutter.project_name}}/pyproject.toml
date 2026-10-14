@@ -10,6 +10,11 @@ dependencies = [
     "dynaconf >=3.2",
     "ipykernel >=6.29",
     "pyarrow >=23.0",
+{% if cookiecutter.altinn %}    "ssb-parquedit (>=0.0.11,<0.0.12)",
+    "ssb-altinn-form-tools (>=0.0.9,<0.0.10)",
+    "ssb-dash-framework (>=0.3.0.dev1786957144,<0.4.0)",
+{% else %}
+{% endif %}
 ]
 
 [dependency-groups]
