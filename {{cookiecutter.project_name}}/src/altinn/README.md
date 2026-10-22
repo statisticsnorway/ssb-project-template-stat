@@ -62,7 +62,7 @@ Skal du behandle flere skjemaer må du endre settings.toml og form_processing.py
 #### settings.toml
 
 ```toml
-form_number = ["ra-XXXX"] # Gjøres om til en liste
+form_number = ["RAXXXX"] # Gjøres om til en liste
 ```
 
 #### form_processing.py
