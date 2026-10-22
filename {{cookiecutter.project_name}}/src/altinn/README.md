@@ -1,17 +1,18 @@
-# Behandling av altinn skjemaer
+# Bruksanvisning for startpakke
 
-## Bruksanvisning for startpakke
+## Innhold
 
-Pakken består av følgende funksjoner. Generelt anbefales det å endre minst mulig, men i "Avansert" er det beskrevet hvordan du kan tilpasse produksjonen til eget skjema. Det står også mer utfyllende om hvert steg lenger nede.
+Pakken består av en del ulike funksjoner/biter. Du kan finne en oversikt i bunnen av denne teksten. Generelt anbefales det å endre minst mulig, men i oversikten under "Avansert" er det beskrevet hvordan du kan tilpasse produksjonen til eget skjema.
 
-| Komponent | Plassering | Forklaring | Avansert |
-|---|---|---|---|
-| get_extractor() | src/altinn/processing/form_processing.py | Her settes hvilken type Extractor skjemaet ditt bruker. DefaultExtractor skal passe de fleste. | Hvis du trenger at skjemaet ditt flates ut på en annen måte enn det som er standard, så kan du skifte ut hva slags Extractor som returneres her. |
-| get_storage_connector() | src/altinn/processing/form_processing.py | Denne funksjonen setter opp koblingen til datalagringen din. Standarden for editering av altinnskjemaer er ssb-parquedit. | Her kan du bestemme hvordan dataene dine som kommer fra Extractor skal lagres. Pakken starter med Parquedit koblingen, men denne kan skiftes til det som passer din undersøkelse. |
-| main_process_forms() | src/altinn/processing/form_processing.py | Dette er prosesseringskoden som syr sammen Extractor og StorageConnector for å først flate ut skjemaene og så lagre de. | Hvis du har flere skjemaer i samme repo/datalagring, se beskrivelse nedenfor. Har du veldig spesielle behov kan du erstatte DefaultFormProcessor med en som arver fra MetaFormProcessor. |
-| app.py | src/altinn/app/app.py | Her ligger editeringsappen din. Du kan kjøre den som en hvilken som helst python fil og den starter opp appen din. Den er utformet med beskrivelse for hvor du kan legge inn egne endringer, dette for å redusere støy og unødvendige konflikter ved oppdatering av malen. | For å utvide og tilpasse appen din kan du bruke fortrinssvis yaml filer eller alternativt python kode for å legge til funksjonalitet. Du kan også lage helt egne skreddersydde komponenter om det er nødvendig. Se veiledning i [ssb-dash-framework sin dokumentasjon](https://github.com/statisticsnorway/ssb-dash-framework)
-| app.yaml | src/altinn/app/app-config/app.yaml | Her er basisoppsett for en yaml basert app. Her kan du utvide med flere moduler og bygge ut appen din. | Se [ssb-dash-framework sin yaml spesifikke dokumentasjon](https://github.com/statisticsnorway/ssb-dash-framework/blob/main/docs/yaml_reference.md) for hvordan moduler settes opp. Alle moduler i ssb-dash-framework som arver fra ModuleBase er mulig å konfigurere med yaml. Du kan også bruke denne base classen for å gjøre dine egne skreddersydde moduler konfigurerbare. |
-| export_forms() | src/altinn/form_export.py | Her er kode for å eksportere data fra lagringen din. Denne er mest relevant om du bruker en lagring som parquedit eller en database. | Om du ønsker spesifikk prosessering gjort etter eksport, for eksempel utledning av hjelpevariabler eller beregning av summer o.l. så er dette en fin plass å legge det inn. | 
+### Innholdsfortegnelse
+
+- [1. Overføring fra Suv bøtte og kildomat](#1-overføring-fra-suv-bøtte-og-kildomat)
+- [2. Prosessering av skjemaene](#2-prosessering-av-skjemaene)
+    - [Har samme undersøkelse flere skjemaer?](#har-samme-undersøkelse-flere-skjemaer)
+- [3. Klargjøring](#3-klargjøring)
+    - [App](#app)
+- [4. Eksport](#4-eksport-form_exportpy)
+- [Ekstra informasjon](#ekstra-informasjon)
 
 ## 1. Overføring fra Suv bøtte og kildomat
 
@@ -103,9 +104,9 @@ Du kan også benytte python for å legge inn moduler og funksjonalitet.
 
 #### Lage egne moduler og skjermbilder
 
-ssb-dash-framework er designet for å være utvidbart, så du kan lage egne moduler som du inkluderer i din egen app.
+ssb-dash-framework er designet for å være utvidbart, så du kan lage egne moduler som du inkluderer i din egen app. Dette har en høyere terskel enn vanlig bruk, så ikke vær redd for å legge ut spørsmål på Viva eller ta kontakt med støtteteam.
 
-Det anbefales å lage en egen mappe i app mappen hvor du legger egne moduler og tilpasninger.
+Deter lurt å lage en egen mappe i app mappen (f.eks. src/altinn/app/egentilpassing/) hvor du legger egne moduler og tilpasninger.
 
 Se veiledning for å lage moduler i https://github.com/statisticsnorway/ssb-dash-framework/tree/main
 
@@ -119,3 +120,16 @@ Se veiledning for å lage moduler i https://github.com/statisticsnorway/ssb-dash
 I dette steget eksporteres et klargjort datasett med alle endringene du har gjort.
 
 Hvis du bruker en av de eksisterende eksport-funksjonene i ssb-altinn-form-tools så følger du alle krav og standarder.
+
+# Ekstra informasjon
+
+## Oversikt over deler/funksjoner i startpakken
+
+| Komponent | Plassering | Forklaring | Avansert |
+|---|---|---|---|
+| get_extractor() | src/altinn/processing/form_processing.py | Her settes hvilken type Extractor skjemaet ditt bruker. DefaultExtractor skal passe de fleste. | Hvis du trenger at skjemaet ditt flates ut på en annen måte enn det som er standard, så kan du skifte ut hva slags Extractor som returneres her. |
+| get_storage_connector() | src/altinn/processing/form_processing.py | Denne funksjonen setter opp koblingen til datalagringen din. Standarden for editering av altinnskjemaer er ssb-parquedit. | Her kan du bestemme hvordan dataene dine som kommer fra Extractor skal lagres. Pakken starter med Parquedit koblingen, men denne kan skiftes til det som passer din undersøkelse. |
+| main_process_forms() | src/altinn/processing/form_processing.py | Dette er prosesseringskoden som syr sammen Extractor og StorageConnector for å først flate ut skjemaene og så lagre de. | Hvis du har flere skjemaer i samme repo/datalagring, se beskrivelse nedenfor. Har du veldig spesielle behov kan du erstatte DefaultFormProcessor med en som arver fra MetaFormProcessor. |
+| app.py | src/altinn/app/app.py | Her ligger editeringsappen din. Du kan kjøre den som en hvilken som helst python fil og den starter opp appen din. Den er utformet med beskrivelse for hvor du kan legge inn egne endringer, dette for å redusere støy og unødvendige konflikter ved oppdatering av malen. | For å utvide og tilpasse appen din kan du bruke fortrinssvis yaml filer eller alternativt python kode for å legge til funksjonalitet. Du kan også lage helt egne skreddersydde komponenter om det er nødvendig. Se veiledning i [ssb-dash-framework sin dokumentasjon](https://github.com/statisticsnorway/ssb-dash-framework)
+| app.yaml | src/altinn/app/app-config/app.yaml | Her er basisoppsett for en yaml basert app. Her kan du utvide med flere moduler og bygge ut appen din. | Se [ssb-dash-framework sin yaml spesifikke dokumentasjon](https://github.com/statisticsnorway/ssb-dash-framework/blob/main/docs/yaml_reference.md) for hvordan moduler settes opp. Alle moduler i ssb-dash-framework som arver fra ModuleBase er mulig å konfigurere med yaml. Du kan også bruke denne base classen for å gjøre dine egne skreddersydde moduler konfigurerbare. |
+| export_forms() | src/altinn/form_export.py | Her er kode for å eksportere data fra lagringen din. Denne er mest relevant om du bruker en lagring som parquedit eller en database. | Om du ønsker spesifikk prosessering gjort etter eksport, for eksempel utledning av hjelpevariabler eller beregning av summer o.l. så er dette en fin plass å legge det inn. | 
