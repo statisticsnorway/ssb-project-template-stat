@@ -112,16 +112,15 @@ Se veiledning for å lage moduler i https://github.com/statisticsnorway/ssb-dash
 
 ### Behandling med kode
 
-
-
+TBD
 
 ## 4. Eksport (form_export.py)
 
 I dette steget eksporteres et klargjort datasett med alle endringene du har gjort.
 
-Hvis du bruker en av de eksisterende eksport-funksjonene i ssb-altinn-form-tools så følger du alle krav og standarder.
-
 # Ekstra informasjon
+
+Her finner du mer informasjon og iblant er den mer avansert, men da skal den helst være markert så man vet hva som er myntet på de spesielt interesserte.
 
 ## Oversikt over deler/funksjoner i startpakken
 
