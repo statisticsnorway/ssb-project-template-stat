@@ -3,5 +3,6 @@
   "email": "oln@ssb.no",
   "project_name": "stat-statistikknavn",
   "description": "Vår statistikk er om X, og gjennomføres 1 gang i året",
-  "license_year": "2022"
+  "license_year": "2022",
+  "altinn": false
 }
